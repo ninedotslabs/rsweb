@@ -1,0 +1,18 @@
+[package]
+name = "manajer"
+version = "0.1.0"
+authors = ["ahdyt <ahdyt@pm.me>"]
+edition = "2018"
+
+build = "src/build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+warp = "0.3.0"
+mime = "0.3.0"
+env_logger = "0.8"
+
+[build-dependencies]
+ructe = { version = "0.13.2", features = ["warp03", "sass"] }

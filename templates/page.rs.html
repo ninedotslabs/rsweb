@@ -1,0 +1,27 @@
+@use super::statics::*;
+@use crate::footer;
+
+@(frameworks: &[(&str, &str)])
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="RSWeb, A Rust Web Template built with warp and ructe, more libraries incoming."/>
+    <link rel="stylesheet" type="text/css" href="/static/@style_css.name"/>
+  </head>
+  <body>
+    <main>
+      <h1>RSWeb</h1>
+      <p>Rust Web Template.</p>
+      <h2>Built with:</h2>
+      <ul class="fw-list">
+      @for (name, href) in frameworks {
+	<li><a href="@href" target="_blank" rel="noopener noreferrer">@name</a></li>
+      }
+      </ul>
+    </main>
+    @:footer()
+  </body>
+</html>
