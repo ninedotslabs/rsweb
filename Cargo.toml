@@ -10,7 +10,7 @@ build = "src/build.rs"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
-warp = "0.3.0"
+warp = "0.3.3"
 mime = "0.3.0"
 env_logger = "0.8"
 
